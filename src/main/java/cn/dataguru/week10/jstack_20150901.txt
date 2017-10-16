@@ -1,0 +1,76 @@
+Attaching to process ID 29620, please wait...
+Debugger attached successfully.
+Server compiler detected.
+JVM version is 25.51-b03
+Deadlock Detection:
+
+Found one Java-level deadlock:
+=============================
+
+"ReentrantLockThread-1":
+ waiting for ownable synchronizer 0x00000000d58fdbc0, (a java/util/concurrent/locks/ReentrantLock$NonfairSync),
+ which is held by "ReentrantLockThread-2"
+"ReentrantLockThread-2":
+ waiting for ownable synchronizer 0x00000000d58fdb48, (a java/util/concurrent/locks/ReentrantLock$NonfairSync),
+ which is held by "ReentrantLockThread-1"
+
+Found a total of 1 deadlock.
+
+Thread 1: (state = BLOCKED)
+
+Locked ownable synchronizers:
+    - None
+
+Thread 17: (state = BLOCKED)
+ - sun.misc.Unsafe.park(boolean, long) @bci=0 (Interpreted frame)
+ - java.util.concurrent.locks.LockSupport.park(java.lang.Object) @bci=14, line=175 (Interpreted frame)
+ - java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt() @bci=1, line=836 (Interpreted frame)
+ - java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.util.concurrent.locks.AbstractQueuedSynchronizer$Node, int) @bci=67, line=870 (Interpreted frame)
+ - java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(int) @bci=17, line=1199 (Interpreted frame)
+ - java.util.concurrent.locks.ReentrantLock$NonfairSync.lock() @bci=21, line=209 (Interpreted frame)
+ - java.util.concurrent.locks.ReentrantLock.lock() @bci=4, line=285 (Interpreted frame)
+ - com.dataguru.week10.HomeWorkReenterantLock$LockThread.run() @bci=138, line=45 (Interpreted frame)
+
+Locked ownable synchronizers:
+    - <0x00000000d58fdbc0>, (a java/util/concurrent/locks/ReentrantLock$NonfairSync)
+
+Thread 16: (state = BLOCKED)
+ - sun.misc.Unsafe.park(boolean, long) @bci=0 (Interpreted frame)
+ - java.util.concurrent.locks.LockSupport.park(java.lang.Object) @bci=14, line=175 (Interpreted frame)
+ - java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt() @bci=1, line=836 (Interpreted frame)
+ - java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(java.util.concurrent.locks.AbstractQueuedSynchronizer$Node, int) @bci=67, line=870 (Interpreted frame)
+ - java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(int) @bci=17, line=1199 (Interpreted frame)
+ - java.util.concurrent.locks.ReentrantLock$NonfairSync.lock() @bci=21, line=209 (Interpreted frame)
+ - java.util.concurrent.locks.ReentrantLock.lock() @bci=4, line=285 (Interpreted frame)
+ - com.dataguru.week10.HomeWorkReenterantLock$LockThread.run() @bci=138, line=45 (Interpreted frame)
+
+Locked ownable synchronizers:
+    - <0x00000000d58fdb48>, (a java/util/concurrent/locks/ReentrantLock$NonfairSync)
+
+Thread 10: (state = BLOCKED)
+
+Locked ownable synchronizers:
+    - None
+
+Thread 9: (state = BLOCKED)
+
+Locked ownable synchronizers:
+    - None
+
+Thread 8: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove(long) @bci=59, line=143 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove() @bci=2, line=164 (Interpreted frame)
+ - java.lang.ref.Finalizer$FinalizerThread.run() @bci=36, line=209 (Interpreted frame)
+
+Locked ownable synchronizers:
+    - None
+
+Thread 7: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.Object.wait() @bci=2, line=502 (Interpreted frame)
+ - java.lang.ref.Reference$ReferenceHandler.run() @bci=36, line=157 (Interpreted frame)
+
+Locked ownable synchronizers:
+    - None
+

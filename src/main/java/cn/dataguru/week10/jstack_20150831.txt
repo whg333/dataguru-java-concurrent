@@ -1,0 +1,62 @@
+Attaching to process ID 38008, please wait...
+Debugger attached successfully.
+Server compiler detected.
+JVM version is 25.51-b03
+Deadlock Detection:
+
+Found one Java-level deadlock:
+=============================
+
+"SynchronizedLockThread-1":
+  waiting to lock Monitor@0x0000000056f86dc8 (Object@0x00000000d58fc6f8, a com/dataguru/week10/HomeWorkSynchronized$ShareObj),
+  which is held by "SynchronizedLockThread-2"
+"SynchronizedLockThread-2":
+  waiting to lock Monitor@0x0000000056f84328 (Object@0x00000000d58fc6b8, a com/dataguru/week10/HomeWorkSynchronized$ShareObj),
+  which is held by "SynchronizedLockThread-1"
+
+Found a total of 1 deadlock.
+
+Thread 1: (state = BLOCKED)
+
+Locked ownable synchronizers:
+    - None
+
+Thread 17: (state = BLOCKED)
+ - com.dataguru.week10.HomeWorkSynchronized$LockThread.run() @bci=135, line=42 (Interpreted frame)
+
+Locked ownable synchronizers:
+    - None
+
+Thread 16: (state = BLOCKED)
+ - com.dataguru.week10.HomeWorkSynchronized$LockThread.run() @bci=135, line=42 (Interpreted frame)
+
+Locked ownable synchronizers:
+    - None
+
+Thread 10: (state = BLOCKED)
+
+Locked ownable synchronizers:
+    - None
+
+Thread 9: (state = BLOCKED)
+
+Locked ownable synchronizers:
+    - None
+
+Thread 8: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove(long) @bci=59, line=143 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove() @bci=2, line=164 (Interpreted frame)
+ - java.lang.ref.Finalizer$FinalizerThread.run() @bci=36, line=209 (Interpreted frame)
+
+Locked ownable synchronizers:
+    - None
+
+Thread 7: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.Object.wait() @bci=2, line=502 (Interpreted frame)
+ - java.lang.ref.Reference$ReferenceHandler.run() @bci=36, line=157 (Interpreted frame)
+
+Locked ownable synchronizers:
+    - None
+
